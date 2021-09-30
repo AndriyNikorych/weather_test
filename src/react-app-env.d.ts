@@ -1,12 +1,12 @@
 /// <reference types="react-scripts" />
 
-type Weather = {
+type WeatherAPI = {
   main: Main,
   sys: Sys,
   name: string,
-  weather: Array<string>,
-  visibility: string,
+  weather: string[Weather],
   wind: Wind,
+  dt: Date,
 };
 
 type Main = {
@@ -24,4 +24,9 @@ type Sys = {
 type Wind = {
   speed: number,
   deg: number,
+};
+
+type Weather = {
+  description: string,
+  icon: string,
 };
