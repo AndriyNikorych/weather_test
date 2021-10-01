@@ -1,0 +1,16 @@
+.select {
+  display: flex;
+  align-self: end;
+  margin: 2px;
+
+  &__language, &__metric {
+    width: 90px;
+
+    color: rgb(0, 126, 148);
+    padding: 2px;
+
+    background-color: $whiteColor;
+    border: 2px solid rgb(0, 126, 148);
+    border-radius: 5px;
+  }
+}
