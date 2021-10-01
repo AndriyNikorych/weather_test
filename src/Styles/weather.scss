@@ -1,0 +1,38 @@
+.weather {
+  display: flex;
+  justify-content: space-evenly;
+  
+  color: $whiteColor;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__city {
+    margin: 5px 0 0;
+    font-size: 50px;
+
+    text-shadow: 3px 6px rgba(50, 50, 50, 0.25);
+  }
+
+  &__temp {
+    margin: 0;
+    font-size: 40px;
+
+    text-shadow: 3px 6px rgba(50, 50, 50, 0.25);
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    list-style: none;
+  }
+
+  &__item {
+    padding: 10px;
+  }
+}
