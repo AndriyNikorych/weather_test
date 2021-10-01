@@ -1,8 +1,14 @@
 .weather {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
   
   color: $whiteColor;
+
+  @include onTablet() {
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
 
   &__info {
     display: flex;

@@ -1,7 +1,13 @@
 .select {
   display: flex;
-  align-self: end;
+  align-self: center;
   margin: 2px;
+  order: -1;
+
+  @include onTablet() {
+    align-self: end;
+    order: 0;
+  }
 
   &__language, &__metric {
     width: 90px;
