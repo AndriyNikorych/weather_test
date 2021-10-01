@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { WeatherList } from './components/WeatherList/WeatherList';
+import { Search } from './components/SearchBar/Search';
 import { getWeather } from './api/api';
 import './App.scss';
 
@@ -21,14 +22,14 @@ export const App: React.FC = () => {
     loadWeather();
   }, [selectedCity, language, metric]);
 
-  const hanleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
     setSelectedCity(city);
     setCity('');
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeCity = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCity(event.target.value);
   };
 
@@ -73,60 +74,18 @@ export const App: React.FC = () => {
 
   return (
     <div className="app">
-      <main className="main container-lg">
-        <div className="search">
-          <form
-            className="search__form"
-            onSubmit={hanleSubmit}
-          >
-            <input
-              type="text"
-              className="search__field"
-              placeholder={chooseCityMessage}
-              value={city}
-              onChange={handleChange}
-            />
-          </form>
+      <main className="main">
 
-          <div className="select">
-            <select
-              value={language}
-              onChange={selectedLanguage}
-              className="select__language"
-            >
-              <option value="en" className="select__en">
-                English
-              </option>
-
-              <option value="ua">
-                Ukrainian
-              </option>
-
-              <option value="ru">
-                Russian
-              </option>
-            </select>
-
-            <select
-              value={metric}
-              onChange={selectedMetric}
-              className="select__metric"
-            >
-              <option value="metric">
-                Metric
-              </option>
-
-              <option value="standard">
-                Standard
-              </option>
-
-              <option value="imperial">
-                Imperial
-              </option>
-            </select>
-          </div>
-        </div>
-
+        <Search
+          submit={handleSubmit}
+          chooseCityMessage={chooseCityMessage}
+          city={city}
+          changeCity={handleChangeCity}
+          language={language}
+          selectedLanguage={selectedLanguage}
+          metric={metric}
+          selectedMetric={selectedMetric}
+        />
         <div className="weather">
           {currentWeather && (validCity)}
         </div>

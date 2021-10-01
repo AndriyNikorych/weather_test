@@ -10,13 +10,14 @@
   }
 
   &__language, &__metric {
+    margin: 0 2px;
     width: 90px;
 
-    color: rgb(0, 126, 148);
+    color: rgb(76, 0, 148);
     padding: 2px;
 
     background-color: $whiteColor;
-    border: 2px solid rgb(0, 126, 148);
+    border: 1px solid rgb(125, 11, 255);
     border-radius: 5px;
   }
 }
