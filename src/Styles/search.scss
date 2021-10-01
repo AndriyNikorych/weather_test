@@ -3,8 +3,19 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 
     border-bottom: 2px solid #fff;
+
+    @include onTablet() {
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+
+  @include onDesktop() {
+    display: flex;
+    justify-content: space-evenly;
+  }
 
   &__field {
     padding-top: 30px;
