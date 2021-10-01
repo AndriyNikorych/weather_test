@@ -2,5 +2,5 @@
 
 Create weather 
 
-[DEMO LINK](https://https://andriynikorych.github.io/weather_test/)
+[DEMO LINK](https://andriynikorych.github.io/weather_test/)
 
