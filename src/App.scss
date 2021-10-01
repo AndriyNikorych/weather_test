@@ -7,5 +7,17 @@
 
 body {
   background-image: url('./img/photo-1569982175971-d92b01cf8694.jfif');
-  background-position: left;
+  background-position: top;
+
+  @include onTablet() {
+    background-size: cover;
+  }
+}
+
+.main {
+  margin: 0 10px;
+
+  @include onTablet() {
+    margin: 0 30px
+  }
 }
