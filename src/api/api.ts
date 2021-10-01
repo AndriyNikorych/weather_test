@@ -1,6 +1,6 @@
 const api = {
   key: '48c10b837a89cf30e61e5a411308c08c',
-  base: 'http://api.openweathermap.org/data/2.5/',
+  base: 'https://api.openweathermap.org/data/2.5/',
 };
 
 export const getWeather = async (cityName: string, language: string, metric: string) => {
