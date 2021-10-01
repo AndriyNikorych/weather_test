@@ -1,6 +1,8 @@
 # Task:
 
-Create weather 
+Create weather APP
+
+# Demo:
 
 [DEMO LINK](https://andriynikorych.github.io/weather_test/)
 
